@@ -24,9 +24,7 @@ const Logo = styled.a`
   color: #000;
   text-decoration: none;
 `;
-const NavContainer = styled(Container)`
-
-`;
+const NavContainer  = styled(Container)``;
 
 const List = styled.ul`
   display: flex;
@@ -46,7 +44,7 @@ const Links = styled.a`
   display: inline-block;
 
   &::title {
-  font-family: 
+    font-family: ;
   }
 
   &::after {
@@ -65,6 +63,31 @@ const Links = styled.a`
   &_active::after {
     transform: scaleX(1);
   }
+`;
+
+const BlockItem = styled.div`
+  margin-top: 100px;
+`;
+const BlockText = styled.p`
+width: 850px;
+font-size: large;
+margin:5px;
+
+`;
+const BlockButton = styled.button`
+  width: 250px;
+  height: 60px;
+  background-color: black;
+  color: white; 
+  font-size:large;
+  hover: gray;
+  margin:10px;
+`;
+const BlockTitle = styled.p`
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 8px;
+
 `;
 
 const links = [
@@ -98,15 +121,13 @@ const Header = () => {
             ))}
           </List>
         </Nav>
-        <div className="title">
-          <p>A TOTALLY NEW WAY SEE ELECTRIC DRIVING</p>
-          <h1>The All-New 2023 Nissan ARAVIA</h1>
-          <p>
-            Fierce, yet refined. Elegant, yet exhilarating. In the ARIYA,
-            there’s always more to the story than meets the eye.
-          </p>
-          <button>Bulid & Price</button>
-        </div>
+        <BlockItem>
+          <BlockTitle>Designed to Thrill</BlockTitle>
+          <BlockText>
+            Fierce, yet refined. Elegant, yet exhilarating. In the ARIYA.
+          </BlockText>
+          <BlockButton>Bulid & Pricem  </BlockButton>
+        </BlockItem>
       </NavContainer>
     </Block>
   );
